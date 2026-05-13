@@ -20,36 +20,6 @@ NLP-driven intent classification — Interprets ambiguous or informal debugging 
 LLM-augmented explanations — Generates human-readable, contextually accurate error explanations
 Authenticated encrypted storage — Session debugging reports are stored with AES-based authenticated encryption, ensuring data confidentiality and tamper-evident retrieval
 
-
-Architecture
-User Query (natural language or code)
-        │
-        ▼
-┌─────────────────────┐
-│  Intent Classifier  │  ← NLP layer (query classification)
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│  Syntax-Tolerant    │  ← AST-based static analysis
-│  Parser             │    (handles broken/incomplete code)
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│  LLM Reasoning      │  ← Large language model
-│  Engine             │    (error explanation + fix suggestion)
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│  Encrypted Report   │  ← AES-authenticated storage
-│  Storage            │    (session auditability)
-└─────────────────────┘
-        │
-        ▼
-   Debug Report (structured output)
-
 Tech stack
 LayerTechnologyCore languagePythonStatic analysisAbstract Syntax Tree (AST)NLPIntent detection, query classificationLLM integrationLarge Language Model APIEncryptionAES (authenticated encryption)CloudIBM CloudDevelopmentJupyter Notebook, Git
 
